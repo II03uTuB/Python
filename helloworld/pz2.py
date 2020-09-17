@@ -1,5 +1,5 @@
 
-
+from helloworld.main import hello
 
 def shout_on_me():
     while True:
@@ -42,7 +42,7 @@ def group_parser():
         stringWithFunction = input('Введите название функции:')
         stringWithFunction = stringWithFunction.lower()
         if stringWithFunction == 'угадайка':
-            print('угадайка')
+            hello()
         elif stringWithFunction == 'покричи':
             shout_on_me()
         elif stringWithFunction == 'калькулятор':
