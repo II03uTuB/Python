@@ -26,12 +26,13 @@ def addCalc():
                 flag = False
                 break
         if flag:
-            list = sumOfTwoString.split('+')
-            if len(list) > 2:
-                print('Вы ввели больше двух слагаемых')
+            listTerms = sumOfTwoString.split('+')
+            if len(listTerms) == 2:
+                print(float(listTerms[0]) + float(listTerms[1]))
                 continue
-            print(float(list[0]) + float(list[1]))
-
+            else:
+                print('Вы указали больше или меньше двух слагаемых')
+                continue
 
 
 
