@@ -1,6 +1,7 @@
 
 from helloworld.main import hello
 
+
 def shout_on_me():
     while True:
         string = input('Введите строку: \n')
@@ -8,6 +9,7 @@ def shout_on_me():
             exit()
         newString = string.upper()
         print('Полученная строка: ', newString)
+
 
 def addCalc():
     while True:
