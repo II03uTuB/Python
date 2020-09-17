@@ -9,7 +9,7 @@ def shout_on_me():
 
 def addCalc():
     while True:
-        sumOfTwoString = input('Введите данные: \n')
+        sumOfTwoString = input('Введите данные:')
         if sumOfTwoString == 'exit':
             exit()
         flag = True
