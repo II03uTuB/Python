@@ -1,14 +1,11 @@
 
 def shout_on_me():
-    global upperStr
     while True:
-        # print('Введите строку')
-        str = input('Введите строку: \n')
-        if str == 'exit' :
+        string = input('Введите строку: \n')
+        if string == 'exit':
             exit()
-        #for x in str:
-        newStr = str.upper()
-        print('Полученная строка: ', newStr)
+        newString = string.upper()
+        print('Полученная строка: ', newString)
 
 
 
