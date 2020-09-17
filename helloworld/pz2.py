@@ -1,4 +1,6 @@
 
+
+
 def shout_on_me():
     while True:
         string = input('Введите строку: \n')
@@ -36,18 +38,19 @@ def addCalc():
 
 
 def group_parser(group):
-    if not group.startswith('733'):
-        print('Это не группа 3 курса')
-        return
+    stringWithFunction = input('Введите название функции:')
+    stringWithFunction.lower()
+    while True:
+        if group.endswith('угадайка'):
+            print('угадайка')
+        elif group.endswith('покричи'):
+            shout_on_me()
+        elif group.endswith('калькулятор'):
+            addCalc()
+        else:
+            print('Нужного пункта меню нет')
+            break
 
-    if group.endswith('3'):
-        print('%s - Третья группа' % group)
-    elif group.endswith('4'):
-        print('%s - Четверная группа' % group)
-    elif group.endswith('5'):
-        print('%s - Пятая группа' % group)
-    else:
-        print('%s - Непонятная группа' % group)
 
 
 def main():
