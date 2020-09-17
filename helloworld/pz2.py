@@ -37,15 +37,15 @@ def addCalc():
                 continue
 
 
-def group_parser(group):
+def group_parser():
     stringWithFunction = input('Введите название функции:')
     stringWithFunction.lower()
     while True:
-        if group.endswith('угадайка'):
+        if stringWithFunction =='угадайка':
             print('угадайка')
-        elif group.endswith('покричи'):
+        elif stringWithFunction =='покричи':
             shout_on_me()
-        elif group.endswith('калькулятор'):
+        elif stringWithFunction == 'калькулятор' :
             addCalc()
         else:
             print('Нужного пункта меню нет')
