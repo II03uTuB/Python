@@ -9,13 +9,21 @@ def shout_on_me():
 
 def addCalc():
     while True:
-        first = input('Введите первое слагаемое: \n')
-        second = input('Введите второе слагаемое: \n')
-        if first or second == 'exit':
+        sumOfTwoString = input('Введите данные: \n')
+
+
+        if sumOfTwoString == 'exit':
             exit()
+        list = sumOfTwoString.split('+')
+        if len(list) > 2:
+            print('Вы ввели больше двух слагаемых')
+            continue
+        print(float(list[0]) + float(list[1]))
+
+
 
 
 
 
 if __name__ == '__main__':
-    shout_on_me()
+    addCalc()
