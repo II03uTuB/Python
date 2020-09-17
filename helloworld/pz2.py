@@ -7,6 +7,13 @@ def shout_on_me():
         newString = string.upper()
         print('Полученная строка: ', newString)
 
+def addCalc():
+    while True:
+        first = input('Введите первое слагаемое: \n')
+        second = input('Введите второе слагаемое: \n')
+        if first or second == 'exit':
+            exit()
+
 
 
 
