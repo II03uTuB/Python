@@ -18,7 +18,6 @@ def newParser():
         for x in functions.keys():
             if x == stringWithFunction:
                 flag = False
-
         if not flag:
             functions[stringWithFunction]()
         else:
