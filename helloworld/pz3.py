@@ -7,15 +7,17 @@ def newParser():
         'shout_on_me': shout_on_me,
         'addCalc': addCalc
     }
+    flag = True
     while True:
-    stringWithFunction = input('Введите название функции:')
-    #x = functions.get(stringWithFunction)
-    functions[stringWithFunction]()
-    # functions.keys(stringWithFunction)
+        stringWithFunction = input('Введите название функции:')
+        for x in functions.keys():
+            if x == stringWithFunction:
+                flag = False
+        if not flag:
+            functions[stringWithFunction]()
+        else:
+            print('Данной функции в словаре нет!')
 
-    functions[x]()
-
-    # if stringWithFunction ==
 
 
 if __name__ == '__main__':
