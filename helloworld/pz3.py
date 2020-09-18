@@ -3,9 +3,9 @@ from helloworld.pz2 import *
 
 def newParser():
     functions = {
-        'hello': hello,
-        'shout_on_me': shout_on_me,
-        'addCalc': addCalc
+        ['1', 'hello']: hello,
+        ['2', 'shout_on_me']: shout_on_me,
+        ['3', 'addCalc']: addCalc
     }
     flag = True
     while True:
@@ -14,7 +14,7 @@ def newParser():
             if x == stringWithFunction:
                 flag = False
         if not flag:
-            functions[stringWithFunction]()
+            functions[stringWithFunction.]()
         else:
             print('Данной функции в словаре нет!')
 
