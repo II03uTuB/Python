@@ -5,17 +5,21 @@ from helloworld.main import hello
 def shout_on_me():
     while True:
         string = input('Введите строку: \n')
-        if string == 'exit':
-            exit()
+        if string == 'q':
+            print('Завершена подпрограмма')
+            break
         newString = string.upper()
         print('Полученная строка: ', newString)
+    return
 
 
 def addCalc():
     while True:
         sumOfTwoString = input('Введите данные:')
-        if sumOfTwoString == 'exit':
-            exit()
+        if sumOfTwoString == 'q':
+            print('Завершена подпрограмма ')
+            break
+
         flag = True
         if len(sumOfTwoString) == 0:
             print('Введена пустая строка, повторите')
@@ -37,6 +41,8 @@ def addCalc():
             else:
                 print('Вы указали больше или меньше двух слагаемых')
                 continue
+
+    return
 
 
 def group_parser():
