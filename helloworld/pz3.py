@@ -13,6 +13,8 @@ def newParser():
     flag = True
     while True:
         stringWithFunction = input('Введите название функции:')
+        if stringWithFunction == 'exit':
+            exit()
         for x in functions.keys():
             if x == stringWithFunction:
                 flag = False

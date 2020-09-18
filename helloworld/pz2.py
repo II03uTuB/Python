@@ -6,8 +6,10 @@ def shout_on_me():
     while True:
         string = input('Введите строку: \n')
         if string == 'q':
-            print('Завершена подпрограмма')
+            print('Завершена подпрограмма ' + shout_on_me.__name__)
             break
+        if string == 'exit':
+            exit()
         newString = string.upper()
         print('Полученная строка: ', newString)
     return
@@ -17,9 +19,10 @@ def addCalc():
     while True:
         sumOfTwoString = input('Введите данные:')
         if sumOfTwoString == 'q':
-            print('Завершена подпрограмма ')
+            print('Завершена подпрограмма ' + addCalc.__name__)
             break
-
+        if sumOfTwoString == 'exit':
+            exit()
         flag = True
         if len(sumOfTwoString) == 0:
             print('Введена пустая строка, повторите')
