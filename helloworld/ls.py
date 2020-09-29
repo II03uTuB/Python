@@ -2,17 +2,29 @@ import os
 
 
 def ls():
-    while(True):
+    while True:
+        home = "C:/Users/User/"
         s = input('Введите папку: ')
-        #dirLists = os.listdir("C:")
-        print(os.listdir("C:" + s))
-
+        if os.path.exists(home + s):
+            if os.path.isdir(home + s):
+                print(os.listdir(home + s))
+            else:
+                print("Вы ввели имя не директории, а чего-то другого")
+        else:
+            print('Объекта(файла/директории) с указанным именем не существует')
         while True:
-            continueV = input("Продолжаем?")
-            if continueV == ("yes" or "да" or "1"):
+            continueV = input("Продолжаем? ")
+            if continueV == "yes":
                 break
-            elif continueV == ("no" or "нет" or "0"):
+            if continueV == "no":
                 exit()
             else:
-                print('Ответьте да\нет, yes\/no, 1/2')
+                print('Ответьте yes or no')
                 continue
+
+
+def main():
+    ls()
+
+if __name__ == '__main__':
+    main()
