@@ -1,5 +1,5 @@
 import random
-
+import unittest
 
 class Guesser():
     """Play a 'guess a number' game"""
