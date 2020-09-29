@@ -9,9 +9,9 @@ def ls():
             if os.path.isdir(home + s):
                 print(os.listdir(home + s))
             else:
-                print("Вы ввели имя не директории, а чего-то другого")
+                print('Не директория')
         else:
-            print('Объекта(файла/директории) с указанным именем не существует')
+            print("Не существует или директория не из home")
         while True:
             continueV = input("Продолжаем? ")
             if continueV == "yes":
