@@ -1,7 +1,7 @@
 import json
 from abc import ABC, abstractmethod
 
-import xml.dom.mimidom
+import xml.dom.minidom
 
 class Reader(ABC):
     @abstractmethod
