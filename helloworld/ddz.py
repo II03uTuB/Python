@@ -1,4 +1,6 @@
 from collections import Counter
+
+import docx
 import matplotlib.pyplot as plt
 from numpy import save, os
 
@@ -13,9 +15,17 @@ def save(name, fmt):
     os.chdir(pwd)
 
 
+def get_text(filename):
+    doc = docx.Document(filename)
+    fullText = []
+    for para in doc.paragraphs:
+        fullText.append(para.text)
+    return '\n'.join(fullText)
+
+
 def stats(filename):
-    with open(filename, 'r', encoding='utf-8') as file:
-        strFile = file.read()
+    strFile = get_text(filename)
+    print(strFile)
     result = sorted(Counter(strFile).items())
     plt.hist(result)
     plt.title('Statistic')
@@ -26,4 +36,4 @@ def stats(filename):
 
 if __name__ == "__main__":
     s = u"Я учусь в Питере. Здесь странная погода."
-    stats('a.txt')
+    stats('timp.docx')
