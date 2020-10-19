@@ -1,8 +1,7 @@
 import json
 from abc import ABC, abstractmethod
-from xml.dom import minidom
+import xml.etree.ElementTree as element
 
-import xml.dom.minidom
 
 class Reader(ABC):
     @abstractmethod
@@ -18,14 +17,15 @@ class ReaderJson(Reader):
 
 
 class ReaderXml(Reader):
-    def read(self, filename, tag):
-        file = minidom.parse(filename)
-        dataFile = file.getElementsByTagName‭(tag)
-        for elem in dataFile: ‭
-            print(elem.firstChild.data‭)
+    def read(self, filename):
+        tree = element.parse(filename)
+        root = tree.getroot()
 
+        for elem in root:
+            for subElem in elem:
+                print(subElem.text)
 
 
 if __name__ == '__main__':
-    j = ReaderJson()
-    j.read('data.json')
+    j = ReaderXml()
+    j.read('data.xml')
