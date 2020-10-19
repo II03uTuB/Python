@@ -1,5 +1,6 @@
 import json
 from abc import ABC, abstractmethod
+from xml.dom import minidom
 
 import xml.dom.minidom
 
@@ -18,9 +19,10 @@ class ReaderJson(Reader):
 
 class ReaderXml(Reader):
     def read(self, filename, tag):
-        tree = xml.ElementTree(tag)
-        with open(filename, "w") as fh:
-            tree.write(fh)
+        file = minidom.parse(filename)
+        dataFile = file.getElementsByTagName‭(tag)
+        for elem in dataFile: ‭
+            print(elem.firstChild.data‭)
 
 
 
